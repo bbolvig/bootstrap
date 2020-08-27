@@ -3,10 +3,11 @@
 GLOBIGNORE=".:.."
 shopt -u dotglob
 
-ln -s $(dirname $0)/.* $HOME
+# TODO copies .git and replace existing files
+ln -s "$(dirname $(realpath $0))"/.* $HOME
 
 sudo apt-get upgrade
-sudo apt install --upgrade git tmux xclip
+sudo apt install --upgrade git tmux xclip vim
 
 echo "Installing spacemacs..."
-. $0/boot-spacemacs.sh
+"$(dirname $0)"/boot-spacemacs.sh
