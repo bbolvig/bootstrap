@@ -4,6 +4,7 @@ alias gib="git branch"
 alias gitc="git checkout"
 alias gits="git status"
 alias gimp="git checkout master && git pull"
+alias gitamend="git commit -a --amend --no-edit"
 complete -o bashdefault -o default -o nospace -F __git_wrap__git_main gitc gitb
 
 alias tf="terraform"
